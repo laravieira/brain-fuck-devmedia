@@ -14,9 +14,9 @@ Para pensar no "como fazer" e, de fato, fazer o programa eu decidi usar o Notepa
 
 Depois de escrever a frase eu pensei "Quais dessas letras se repetem mais vezes?", então escrevi a frase "Quero uma assinatura da DevMedia!" separando cada letra em uma linha. Depois, na frente das letras eu coloquei seus repectivos valores da tabela ASC-II.
 
-Obvio que despois de fazer isso eu não vi padrão nenhum pq não estava organizado, ai pedi o Notepad++ pra organizar as linhas em ordem crescente considerando o número da tabela ASC-II das letras que estavam escritas. Isso resoltou no que está no arquivo [analise](analise).
+Obvio que despois de fazer isso eu não vi padrão nenhum pq não estava organizado, ai pedi o Notepad++ pra organizar as linhas em ordem crescente considerando o número da tabela ASC-II das letras que estavam escritas. Isso resultou no que está no arquivo [analise](analise).
 
-Tinhas algumas letras que se repetiam várias vezes, mas o que mais me agradou era que tinha uns grupos de letras próximas, vou exemplificar: assinatura (umas das palavras da frase) ela não só tem a letra 'a' repetida três vezes como as letras 's', 'r', 't', 'u' estão próximas umas das outras no alfabeto e, consequentimente, na tabela ASC-II, assim é mais fácil eu mudar de letras se eu tiver grupos em posições distantes da tabela e ficar mudando de grupo para pegar letras distantes. Assim eu separei as letras das frases nos seguintes grupos:
+Tinha algumas letras que se repetiam várias vezes, mas o que mais me agradou era que tinha uns grupos de letras próximas, vou exemplificar: "assinatura" (umas das palavras da frase) ela não só tem a letra 'a' repetida três vezes como as letras 's', 'r', 't', 'u' estão próximas umas das outras no alfabeto e, consequentimente, na tabela ASC-II, assim é mais fácil de mudar as letras se eu tiver grupos em posições distantes da tabela e ficar mudando de grupo para pegar letras distantes. Assim eu separei as letras das frases nos seguintes grupos:
 
 1. ' ' (espaço) (posição 32 na tabela ASC-II);
 2. 'D', 'M' e 'Q' (posição 68, 77, 81 respectivamente na tabela ASC-II);
@@ -37,22 +37,22 @@ Para começar eu posicionei os grupos em seus lugares, usando os endereços de m
 
 Assim eu obtive o seguinte código:
 ```
-// Colocar a posição 32 no segundo endereço
+// Coloca a posição 32 no segundo endereço
 +++
 [>++++++++++<-]
 >++
 
-// Colocar a posição 81 no terceiro endereço
+// Coloca a posição 81 no terceiro endereço
 <++++++++
 [>>++++++++++<<-]
 >>+
 
-// Colocar a posição 117 no quarto endereço
+// Coloca a posição 117 no quarto endereço
 <<+++++++++++
 [>>>++++++++++<<<-]
 >>>+++++++
 
-// Colocar a posição 33 no quinto endereço
+// Coloca a posição 33 no quinto endereço
 <<<+++
 [>>>>++++++++++<<<<-]
 >>>>+++
@@ -75,7 +75,7 @@ Setadas as posições iniciais de cada grupo em seu respectivos endereços, agor
 
 ```
 Agora eu tive uma ideia que vai diminuir meu código, a letra 'a' se repete várias vezes daqui pra frente e a maioria das outras letras estão um tanto quanto distantes do 'a', isso não seria um problema de eu tivesse separado os grupos com mais cautela, mas...
-Então eu resolvo fazer o seguinte: Eu pego o endereço do segundo grupo (das letras em maiúsculo e coloco nela a posição da letra 'a'), depois, quando não precisar mais dele usarei o endereço do espaço para as letras maiúsculas restantes...
+Então eu resolvo fazer o seguinte: Eu pego o endereço do segundo grupo (das letras em maiúsculo e coloco nele a posição da letra 'a'), depois, usarei o endereço do espaço para as letras maiúsculas restantes quando não precisar mais da posição do espaço...
 ```
 // Elevo a terceira memória para 97 (Letra a)
 // Essa memória já tinha o valor 81, por isso
@@ -104,7 +104,7 @@ Depois disso voltei a imprimir as letras:
 <.                // Espaço em branco (32)
 
 ```
-Lembra que falei sobre usar o endereço do espaço para as letras maiúsculas restantes? Então é agora:
+Lembra que falei sobre usar o endereço do espaço para as letras maiúsculas restantes? Então, é agora:
 ```
 // Elevo a segunda memória para 62 (Letra D)
 // Essa memória já tinha o valor 32, por isso
@@ -128,4 +128,4 @@ Resolvido esses problemas com os grupos, termino de imprimir as letras restantes
 
 ## Tá aí
 Terminado o código que imprime a frase "Quero uma assinatura da DevMedia!" na linguagem **Brainfuck** com todas as letras, espaços e caracteres especiais.
-O Código completo e comentado esta [comentado](aqui) e código sem comentários e levemente *"apertado"* está [compactado](aqui).
+O Código completo e comentado esta [aqui](comentado) e código sem comentários e levemente *"apertado"* está [aqui](compactado).
