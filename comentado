@@ -1,0 +1,67 @@
+// Eleva a segunda memória para 32 (espaço em branco)
++++
+[>++++++++++<-]
+>++
+
+// Eleva a terceita memória para 81 (Letra Q)
+<++++++++
+[>>++++++++++<<-]
+>>+
+
+// Eleva a quarta memória para 117 (Letra u)
+<<+++++++++++
+[>>>++++++++++<<<-]
+>>>+++++++
+
+// Eleva a quinta memória para 33 (ponto de exclamação)
+<<<+++
+[>>>>++++++++++<<<<-]
+>>>>+++
+
+// Volta para a memória inicial
+<<<<
+
+// Imprime as letras reaproveitando as váriáveis declaradas
+
+>>.               // Letra Q (81)
+>.                // Letra u (117)
+----------------. // Letra e (101)
++++++++++++++.    // Letra r (114)
+---.              // Letra o (111)
+<<.               // Espaço em branco (32)
+>>++++++.         // Letra u (117)
+--------.         // Letra m (109)
+
+// Elevo a terceira memória para 97 (Letra a)
+<<<++
+[>>++++++++<<-]
+
+>>.               // Letra a (97)
+<.                // Espaço em branco (32)
+>.                // Letra a (97)
+>++++++.          // Letra s (115)
+.                 // Letra s (115)
+----------.       // Letra i (105)
++++++.            // Letra n (110)
+<.                // Letra a (97)
+>++++++.          // Letra t (116)
++.                // Letra u (117)
+---.              // Letra r (114)
+<.                // Letra a (97)
+<.                // Espaço em branco (32)
+>+++.             // Letra d (100)
+---.              // Letra a (97)
+<.                // Espaço em branco (32)
+
+// Elevo a segunda memória para 62
+<+++
+[>++++++++++<-]
+>++++++.           // Letra D (68)
+>++++.             // Letra e (101)
+>++++.             // Letra v (118)
+<<+++++++++.       // Letra M (77)
+>.                 // Letra e (101)
+-.                 // Letra d (100)
++++++.             // Letra i (105)
+--------.          // Letra a (97)
+>>.                // Exclamação (33)
